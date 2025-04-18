@@ -1,0 +1,34 @@
+
+h1 {
+  color: white;
+}
+
+.about-content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3em;
+}
+
+.about-portrait {
+  background-color: black;
+  width: 400px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-textContainer {
+  margin: 0 1em 0 1em; 
+  width: 400px;
+}
+
+  .about-textContainer p {
+    font-size: 1.75em;
+  }
+
+#about-contentContainer {
+    margin: 5em 0 5em 0;
+}
