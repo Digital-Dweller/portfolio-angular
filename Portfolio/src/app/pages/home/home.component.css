@@ -1,1 +1,28 @@
 
+
+
+#home-content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+#home-portrait {
+    background-color: black;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  #home-portrait h1 {
+    color: white;
+  }
+#home-textContainer{
+    margin-left: 1em;
+    width: 400px;
+}
+  #home-textContainer p{
+    font-size: 1.75em;
+}
