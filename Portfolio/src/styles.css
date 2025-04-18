@@ -46,11 +46,11 @@ header {
     margin: 0 0.5em 0 0.5em;
 }
 
-.linkedin-link {
+#linkedin-link {
     height: 2em;
 }
 
- .linkedin-link img {
+ #linkedin-link img {
     max-height: 100%;
     max-width: 100%;
   }
