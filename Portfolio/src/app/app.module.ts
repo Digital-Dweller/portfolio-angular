@@ -7,6 +7,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { PlannerappComponent } from './pages/projects/plannerapp/plannerapp.component';
+import { RecipekeeperComponent } from './pages/projects/recipekeeper/recipekeeper.component';
+import { InventorywinappComponent } from './pages/projects/inventorywinapp/inventorywinapp.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { ProjectsComponent } from './pages/projects/projects.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    PlannerappComponent,
+    RecipekeeperComponent,
+    InventorywinappComponent
   ],
   imports: [
     BrowserModule,
