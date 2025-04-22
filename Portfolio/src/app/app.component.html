@@ -1,11 +1,38 @@
 <header>
   <h3>Alex Richards</h3>
   <div class="nav-links">
-    <a class="nav-link" routerLink="/home">Home</a>
-    <a class="nav-link" routerLink="/about">About</a>
-    <a class="nav-link" routerLink="/projects">Projects</a>
-    <a class="nav-link" routerLink="/contact">Contact</a>
-    <a id="linkedin-link" href="https://www.linkedin.com/in/alex-richards-a93a5513a/" target="_blank" rel="noopener noreferrer">
+    <a
+       class="nav-link"
+       routerLink="/home"
+       routerLinkActive="active-appLink"
+       [routerLinkActiveOptions]="{ exact: true }"
+    >
+       Home
+    </a>
+    <a
+       class="nav-link"
+       routerLink="/about"
+       routerLinkActive="active-appLink"
+       [routerLinkActiveOptions]="{ exact: true }"
+    >
+       About
+    </a>
+    <a
+       class="nav-link"
+       routerLink="/projects"
+       routerLinkActive="active-appLink"
+    >
+       Projects
+    </a>
+    <a
+       class="nav-link"
+       routerLink="/contact"
+       routerLinkActive="active-appLink"
+       [routerLinkActiveOptions]="{ exact: true }"
+    >
+       Contact
+    </a>
+    <a id="linkedin-link" class="nav-link" href="https://www.linkedin.com/in/alex-richards-a93a5513a/" target="_blank" rel="noopener noreferrer">
       <img src="resources\linkedinIcon-blk.png" alt="Linkedin" />
     </a>
   </div>
