@@ -1,0 +1,39 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.RK-content {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin-bottom: 3em;
+}
+
+.RK-screenshot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RK-textContainer {
+    align-content: center;
+    padding: 0 1em 0 1em;
+    width: 40%;
+}
+
+  .RK-textContainer p {
+    font-size: 1.25em;
+    text-indent: 2em;
+  }
+  .RK-textContainer ul {
+    font-size: 1.25em;
+  }
+
+#RK-contentContainer {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+}
