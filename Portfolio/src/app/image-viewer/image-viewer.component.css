@@ -1,0 +1,29 @@
+
+#viewerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+}
+#viewerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+#viewerImage-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.viewerButton {
+  all: unset;
+  padding: .5em .5em;
+  cursor: pointer;
+  height: 3em;
+  width: 3em;
+}
+.viewerButton:disabled {
+    cursor: default;
+    opacity: .5;
+}

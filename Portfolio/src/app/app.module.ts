@@ -10,6 +10,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { PlannerappComponent } from './pages/projects/plannerapp/plannerapp.component';
 import { RecipekeeperComponent } from './pages/projects/recipekeeper/recipekeeper.component';
 import { InventorywinappComponent } from './pages/projects/inventorywinapp/inventorywinapp.component';
+import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { InventorywinappComponent } from './pages/projects/inventorywinapp/inven
     ProjectsComponent,
     PlannerappComponent,
     RecipekeeperComponent,
-    InventorywinappComponent
+    InventorywinappComponent,
+    ImageViewerComponent
   ],
   imports: [
     BrowserModule,

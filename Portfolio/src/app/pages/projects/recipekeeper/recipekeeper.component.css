@@ -2,14 +2,15 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  justify-content: center;
 }
 .RK-content {
     display: flex;
-    flex: 1;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     margin-bottom: 3em;
 }
-
 .RK-screenshot {
     display: flex;
     align-items: center;
@@ -17,9 +18,9 @@
 }
 
 .RK-textContainer {
-    align-content: center;
-    padding: 0 1em 0 1em;
-    width: 40%;
+    flex: 1;
+    padding: 0 1em;
+
 }
 
   .RK-textContainer p {
@@ -32,8 +33,13 @@
 
 #RK-contentContainer {
     display: flex;
-    flex: 1;
     align-items: center;
     justify-content: center;
-
+    width: 80%;
+    margin: 10% auto;
+}
+#imageViewer{
+    display: flex;
+    flex: 1;
+    max-width: 30%;
 }
