@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+}
+#contactForm-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+app-contact-form {
+  width: 50%
+}

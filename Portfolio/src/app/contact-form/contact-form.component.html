@@ -1,0 +1,26 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div id="inputContainer">
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name" />
+    <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+      Name
+    </div>
+
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" />
+    <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+      Email
+    </div>
+
+    <label for="message">Message:</label>
+    <textarea id="message" formControlName="message" rows="6" maxlength="1000" (input)="updateCharCount()"></textarea>
+    <div class="char-counter">
+      {{ messageLength }}/1000 characters
+    </div>
+    <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+      Message
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="contactForm.invalid">Send</button>
+</form>
