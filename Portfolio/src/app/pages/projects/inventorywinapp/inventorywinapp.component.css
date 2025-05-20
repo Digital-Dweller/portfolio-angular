@@ -38,7 +38,6 @@
 }
 
 #imageViewer {
-  display: flex;
-  flex: 1;
-  max-width: 80%;
+  width: 80%;
+  height: 20%;
 }

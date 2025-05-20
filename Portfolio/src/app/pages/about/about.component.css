@@ -11,24 +11,25 @@ h1 {
   margin-bottom: 3em;
 }
 
-.about-portrait {
-  background-color: black;
-  width: 400px;
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .about-textContainer {
   margin: 0 1em 0 1em; 
-  width: 400px;
+  width: 60%;
 }
 
   .about-textContainer p {
-    font-size: 1.75em;
+    font-size: 1.5em;
   }
 
 #about-contentContainer {
-    margin: 5em 0 5em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5% 10%;
+}
+
+#imageViewer {
+  width: 40%;
 }
