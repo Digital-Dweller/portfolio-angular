@@ -15,7 +15,6 @@ h1 {
 
 .about-textContainer {
   margin: 0 1em 0 1em; 
-  width: 60%;
 }
 
   .about-textContainer p {
@@ -31,5 +30,5 @@ h1 {
 }
 
 #imageViewer {
-  width: 40%;
+  width: 60%;
 }
