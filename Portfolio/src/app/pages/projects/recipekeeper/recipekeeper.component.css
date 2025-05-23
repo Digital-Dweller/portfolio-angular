@@ -36,10 +36,10 @@
     align-items: center;
     justify-content: center;
     width: 80%;
-    margin: 10% auto;
+    margin: 5% 10%;
 }
 #imageViewer{
     display: flex;
     flex: 1;
-    max-width: 30%;
+    max-width: 35%;
 }

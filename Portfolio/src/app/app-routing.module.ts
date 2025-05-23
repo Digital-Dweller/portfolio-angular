@@ -18,6 +18,7 @@ const routes: Routes = [
     path: 'projects',
     component: ProjectsComponent,
     children: [
+      { path: '', redirectTo: 'plannerapp', pathMatch: 'full' },
       { path: 'inventorywinapp', component: InventorywinappComponent },
       { path: 'plannerapp', component: PlannerappComponent },
       { path: 'recipekeeper', component: RecipekeeperComponent}
