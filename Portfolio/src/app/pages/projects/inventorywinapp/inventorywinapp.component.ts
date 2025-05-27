@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-inventorywinapp',
   standalone: false,
   templateUrl: './inventorywinapp.component.html',
-  styleUrl: './inventorywinapp.component.css'
+  styleUrl: './inventorywinapp.component.scss'
 })
 export class InventorywinappComponent {
   componentImages: string[] = [

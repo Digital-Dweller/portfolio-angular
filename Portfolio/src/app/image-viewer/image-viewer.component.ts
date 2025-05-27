@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'app-image-viewer',
   standalone: false,
   templateUrl: './image-viewer.component.html',
-  styleUrl: './image-viewer.component.css'
+  styleUrl: './image-viewer.component.scss'
 })
 export class ImageViewerComponent {
   @Input() viewerImages: string[] = [];

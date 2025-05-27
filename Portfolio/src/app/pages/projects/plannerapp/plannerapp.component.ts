@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-plannerapp',
   standalone: false,
   templateUrl: './plannerapp.component.html',
-  styleUrl: './plannerapp.component.css'
+  styleUrl: './plannerapp.component.scss'
 })
 export class PlannerappComponent {
   componentImages: string[] = [

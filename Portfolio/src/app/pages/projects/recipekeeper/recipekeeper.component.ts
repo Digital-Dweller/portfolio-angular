@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-recipekeeper',
   standalone: false,
   templateUrl: './recipekeeper.component.html',
-  styleUrl: './recipekeeper.component.css'
+  styleUrl: './recipekeeper.component.scss'
 })
 export class RecipekeeperComponent {
   componentImages: string[] = [
