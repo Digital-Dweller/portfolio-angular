@@ -1,41 +1,39 @@
-:host {
+#InvMan-contentContainer {
   display: flex;
-  flex-direction: column;
-  flex: 1;
+  align-items: center;
   justify-content: center;
 }
 
 .InvMan-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex: 1;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 5vh;
 }
-
 
 .InvMan-textContainer {
-  flex: 1;
-  padding: 0 1em;
-  max-width: 70%;
-}
-
-  .InvMan-textContainer p {
-    font-size: 1.25em;
-    text-indent: 2em;
-  }
-
-  .InvMan-textContainer ul {
-    font-size: 1.25em;
-  }
-
-#InvMan-contentContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 80%;
-  margin: 2% 10%;
 }
 
-#imageViewer {
-  width: 60%;
+.InvMan-textContainer p {
+  font-size: 1.25em;
+  text-indent: 2em;
+}
+
+.InvMan-textContainer ul {
+  font-size: 1.25em;
+}
+
+@media (min-width: 768px) {
+  #imageViewer {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  #imageViewer {
+    width: 90%;
+  }
 }
