@@ -1,21 +1,41 @@
-
-#home-content {
+@media (min-width: 768px) {
+  #home-content {
     display: flex;
     flex: 1;
     align-items: center;
     justify-content: center;
-}
-#home-portrait {
-    width: 20%;
-}
-
-  #home-portrait h1 {
-    color: white;
   }
-#home-textContainer{
+
+  #home-portrait {
+    width: 20%;
+  }
+
+  #home-textContainer {
     margin-left: 1em;
     width: 50%;
+  }
 }
-  #home-textContainer p{
+
+@media (max-width: 768px) {
+  #home-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #home-portrait {
+    width: 40vw;
+    margin-top: 5vh;
+  }
+
+  #home-textContainer {
+    justify-items: center;
+    width: 80%;
+  }
+}
+
+  #home-textContainer p {
     font-size: 1.5em;
-}
+  }
