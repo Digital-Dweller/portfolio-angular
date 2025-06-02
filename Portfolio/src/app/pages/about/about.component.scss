@@ -1,5 +1,8 @@
-h1 {
-  color: white;
+#about-contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-content {
@@ -7,25 +10,36 @@ h1 {
   flex: 1;
   align-items: center;
   justify-content: center;
-  margin-bottom: 3em;
+  margin-bottom: 5vh;
 }
 
 .about-textContainer {
-  margin: 0 1em 0 1em; 
+  width: 80%;
 }
 
-  .about-textContainer p {
-    font-size: 1.5em;
+.about-textContainer p {
+  font-size: 1.5em;
+}
+
+@media (min-width: 768px) {
+  #imageViewer {
+    width: 70%;
   }
-
-#about-contentContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 2% 10%;
+}
+@media (max-width: 768px) {
+  #imageViewer {
+    width: 90%;
+  }
 }
 
-#imageViewer {
-  width: 70%;
-}
+
+
+
+
+
+
+
+
+
+
+
