@@ -10,6 +10,14 @@
   justify-content: center;
 }
 
-app-contact-form {
-  width: 50%;
+@media (min-width: 768px) {
+  app-contact-form {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  app-contact-form {
+    width: 90%;
+  }
 }
