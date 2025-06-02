@@ -1,0 +1,33 @@
+#viewerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+#viewerImage {
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  max-height: 100%;
+}
+
+#viewerImage-container {
+  display: flex;
+  align-items: center;
+  height: 50vh;
+}
+
+.viewerButton {
+  all: unset;
+  padding: .5em .5em;
+  cursor: pointer;
+  height: 3em;
+  width: 3em;
+}
+
+.viewerButton:disabled {
+  cursor: default;
+  opacity: .5;
+}

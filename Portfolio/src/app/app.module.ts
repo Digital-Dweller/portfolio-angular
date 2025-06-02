@@ -12,6 +12,7 @@ import { RecipekeeperComponent } from './pages/projects/recipekeeper/recipekeepe
 import { InventorywinappComponent } from './pages/projects/inventorywinapp/inventorywinapp.component';
 import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ImageViewerLandscapeComponent } from './image-viewer-landscape/image-viewer-landscape.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     RecipekeeperComponent,
     InventorywinappComponent,
     ImageViewerComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    ImageViewerLandscapeComponent
   ],
   imports: [
     BrowserModule,

@@ -8,11 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
   aboutImages1: string[] = [
-    'resources/about_images/aboutPic1.png',
-    'resources/invManager/invMan_screenshot2.jpg',
-    'resources/invManager/invMan_screenshot3.jpg',
-    'resources/invManager/invMan_screenshot4.jpg',
-    'resources/invManager/invMan_screenshot5.jpg',
-    'resources/invManager/invMan_screenshot6.jpg'
+    'resources/about_images/pcb2.JPG',
+    'resources/about_images/pcb1.JPG',
+    'resources/about_images/schematic.JPG',
+    'resources/about_images/enclosure1.JPG',
+    'resources/about_images/enclosure2.JPG',
+    'resources/about_images/wireframe.jpg',
+    'resources/about_images/codeSample1.JPG',
+    'resources/about_images/codeSample2.JPG',
+    'resources/about_images/codeSample3.JPG',
+    'resources/about_images/codeSample4.JPG'
   ];
 }
