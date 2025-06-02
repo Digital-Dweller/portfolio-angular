@@ -4,15 +4,6 @@
   justify-content: center;
 }
 
-.InvMan-content {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 5vh;
-}
-
 .InvMan-textContainer {
   width: 80%;
 }
@@ -27,12 +18,28 @@
 }
 
 @media (min-width: 768px) {
+  .InvMan-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    margin: 2% 5%;
+  }
+
   #imageViewer {
     width: 70%;
   }
 }
 
 @media (max-width: 768px) {
+  .InvMan-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   #imageViewer {
     width: 90%;
   }

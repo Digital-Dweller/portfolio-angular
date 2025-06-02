@@ -13,21 +13,51 @@
   max-height: 100%;
 }
 
-#viewerImage-container {
-  display: flex;
-  align-items: center;
-  height: 50vh;
-}
-
 .viewerButton {
   all: unset;
-  padding: .5em .5em;
   cursor: pointer;
-  height: 3em;
-  width: 3em;
+  height: 100px;
+  width: 100px;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewerButton svg {
+  width: 2em;
+  height: 2em;
+}
+
+#viewerImage-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
 }
 
 .viewerButton:disabled {
   cursor: default;
   opacity: .5;
+}
+
+@media (min-width: 768px) {
+  #viewerImage-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+  }
+}
+
+@media (max-width: 768px) {
+  #viewerImage-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+  }
 }

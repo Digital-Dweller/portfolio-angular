@@ -13,10 +13,18 @@
 
 .viewerButton {
   all: unset;
-  padding: .5em .5em;
   cursor: pointer;
-  height: 10rem;
-  width: 10rem;
+  height: 100px;
+  width: 100px;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewerButton svg {
+  width: 2em;
+  height: 2em;
 }
 
 .viewerButton:disabled {
