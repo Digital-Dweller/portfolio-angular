@@ -1,39 +1,82 @@
 <header>
   <h3>Alex Richards</h3>
-  <div class="nav-links">
-    <a
-       class="nav-link"
+  <button class="hamburger" (click)="toggleMenu()" aria-label="Toggle navigation">
+    ☰
+  </button>
+  <div class="nav-links" [ngClass]="{ 'show': menuOpen }">
+    <a class="nav-link"
        routerLink="/home"
        routerLinkActive="active-appLink"
        [routerLinkActiveOptions]="{ exact: true }"
-    >
-       Home
+       (click)="closeMenu(); closeProjects()">
+      Home
     </a>
-    <a
-       class="nav-link"
+    <a class="nav-link"
        routerLink="/about"
        routerLinkActive="active-appLink"
        [routerLinkActiveOptions]="{ exact: true }"
-    >
-       About
+       (click)="closeMenu(); closeProjects()">
+      About
     </a>
-    <a
-       class="nav-link"
+    <a class="nav-link"
+       id="projectsDesktop"
        routerLink="/projects"
        routerLinkActive="active-appLink"
-    >
-       Projects
+       (click)="closeMenu()">
+      Projects
     </a>
-    <a
-       class="nav-link"
+    <a class="nav-link"
+       id="projectsMobile"
+       routerLink="null"
+       [class.active-appLink]="isProjectSubpageActive()"
+       (click)="toggleProjects($event)">
+      Projects +
+    </a>
+    <div id="projectLinks_Mobile" [ngClass]="{ 'show': menuOpen_projects }">
+      <a id="plannerapp-link"
+         class="project-link"
+         routerLink="/projects/plannerapp"
+         routerLinkActive="active-appLink"
+         [routerLinkActiveOptions]="{ exact: true }"
+         (click)="closeMenu()">
+        -Degree Planner
+      </a>
+      <a id="recipekeeper-link"
+         class="project-link"
+         routerLink="/projects/recipekeeper"
+         routerLinkActive="active-appLink"
+         [routerLinkActiveOptions]="{ exact: true }"
+         (click)="closeMenu()">
+        -Recipe Keeper
+      </a>
+      <a id="inventorywinapp-link"
+         class="project-link"
+         routerLink="/projects/inventorywinapp"
+         routerLinkActive="active-appLink"
+         [routerLinkActiveOptions]="{ exact: true }"
+         (click)="closeMenu()">
+        -Inventory Manager
+      </a>
+    </div>
+    <a class="nav-link"
        routerLink="/contact"
        routerLinkActive="active-appLink"
        [routerLinkActiveOptions]="{ exact: true }"
-    >
-       Contact
+       (click)="closeMenu(); closeProjects()">
+      Contact
     </a>
-    <a id="linkedin-link" class="nav-link" href="https://www.linkedin.com/in/alex-richards-a93a5513a/" target="_blank" rel="noopener noreferrer">
-      <img src="resources/linkedinIcon-blk.png" alt="Linkedin link" />
+    <a id="linkedin-link"
+       class="nav-link"
+       href="https://www.linkedin.com/in/alex-richards-a93a5513a/"
+       target="_blank"
+       rel="noopener noreferrer"
+       (click)="closeMenu(); closeProjects()">
+      <picture>
+        <source srcset="resources/linkedinLogo.png" media="(max-width: 768px)">
+        <source srcset="resources/linkedinIcon-blk.png" media="(min-width: 769px)">
+        <img src="resources/linkedinIcon-blk.png" alt="LinkedIn link" />
+      </picture>
+
     </a>
   </div>
 </header>

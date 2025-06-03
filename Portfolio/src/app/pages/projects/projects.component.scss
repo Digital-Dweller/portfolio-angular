@@ -1,16 +1,16 @@
-#projectsNavbar {
-  display: flex;
-  justify-content: center;
-  align-content: start;
-  border-bottom: 1px solid black;
-}
-
 
 
 .project-link:hover {
   text-decoration: underline;
 }
 @media (min-width: 768px) {
+  #projectsNavbar {
+    display: flex;
+    justify-content: center;
+    align-content: start;
+    border-bottom: 1px solid black;
+  }
+
   .project-link {
     font-size: 1.5rem;
     color: black;
@@ -25,6 +25,10 @@
 }
 
 @media (max-width: 768px) {
+  #projectsNavbar {
+    display: none;
+  }
+
   .project-link {
     font-size: 1.25rem;
     color: black;
