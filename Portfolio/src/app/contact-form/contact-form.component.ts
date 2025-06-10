@@ -39,11 +39,8 @@ export class ContactFormComponent {
           captcha: token
         };
 
-        console.log('Submitting form with values:', formData);
-
         this.http.post('/api/contact', formData).subscribe({
           next: res => {
-            console.log('Response from server:', res);
             alert('Form submitted successfully.');
           },
           error: err => {
