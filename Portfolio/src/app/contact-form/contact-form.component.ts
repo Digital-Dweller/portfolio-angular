@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+
+declare const grecaptcha: any;
 
 @Component({
   selector: 'app-contact-form',
@@ -10,7 +13,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContactFormComponent {
   contactForm: FormGroup;
   messageLength = 0;
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
@@ -22,9 +25,25 @@ export class ContactFormComponent {
     this.messageLength = this.contactForm.get('message')?.value?.length || 0;
   }
 
+
+
   onSubmit() {
     if (this.contactForm.valid) {
-      console.log('Form Data:', this.contactForm.value);
+      return;
     }
+
+    grecaptcha.ready(() => {
+      grecaptcha.execute('6LfROlcrAAAAADQMWEka1_jjK4cCswPeezBRHaiz', { action: 'contact_form' }).then((token: string) => {
+        const formData = {
+          ...this.contactForm.value,
+          captcha: token
+        };
+
+        this.http.post('/api/contact', formData).subscribe({
+          next: res => alert('Form submitted successfully.'),
+          error: err => alert('CAPTCHA verification failed.')
+        });
+      });
+    });
   }
 }
