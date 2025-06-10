@@ -13,6 +13,8 @@ import { InventorywinappComponent } from './pages/projects/inventorywinapp/inven
 import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ImageViewerLandscapeComponent } from './image-viewer-landscape/image-viewer-landscape.component';
+import { provideHttpClient } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ImageViewerLandscapeComponent } from './image-viewer-landscape/image-vi
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
