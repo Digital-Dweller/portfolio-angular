@@ -28,7 +28,7 @@ export class ContactFormComponent {
 
 
   onSubmit() {
-    if (this.contactForm.valid) {
+    if (!this.contactForm.valid) {
       return;
     }
 
