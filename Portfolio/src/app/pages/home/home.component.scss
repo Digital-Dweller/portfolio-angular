@@ -89,6 +89,10 @@
     font-size: 1.25em;
   }
 
+  #home-content h2 {
+      text-align: center;
+  }
+  
   #home-content h3 {
     text-decoration: underline;
     margin: 0;
@@ -157,7 +161,7 @@
   }
 
   .degreeInfo p {
-    margin: 0;
+    margin: 0 5%;
   }
 }
 
