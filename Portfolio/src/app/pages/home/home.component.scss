@@ -1,3 +1,7 @@
+#home-content h2 {
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   #home-content {
     display: flex;
@@ -9,18 +13,20 @@
     margin: 5%;
   }
 
-  #home-content h3 {
-    text-decoration: underline;
-    margin: 0;
-  }
-  #home-portrait {
-    width: 30%;
-  }
 
-  #home-textContainer {
-    margin-left: 1em;
-    width: 80%;
-  }
+    #home-content h3 {
+      text-decoration: underline;
+      margin: 0;
+    }
+
+    #home-portrait {
+      width: 30%;
+    }
+
+    #home-textContainer {
+      margin-left: 1em;
+      width: 80%;
+    }
 
     #listHolder {
       display: flex;
@@ -51,32 +57,33 @@
       align-items: center;
       width: 50%;
     }
+
     #education {
-        display: flex;
-        flex-direction: column;
-        margin-top: 2%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 2%;
     }
 
-    #education h4{
-        margin: 0;
+    #education h4 {
+      margin: 0;
     }
 
-    #education ul{
-        margin-top: 0;
+    #education ul {
+      margin-top: 0;
     }
 
     .degreeInfo {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 10%;
-        margin: 0;
-        font-style: italic;
-    }
-  .degreeInfo p{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 10%;
       margin: 0;
-  }
+      font-style: italic;
+    }
 
+    .degreeInfo p {
+      margin: 0;
+    }
   }
 
 @media (max-width: 768px) {
