@@ -1,0 +1,16 @@
+
+@media (min-width: 768px) {
+  #AssistantChat {
+    position: fixed;
+    bottom: 1vh;
+    right: 1vh;
+  }
+}
+
+@media (max-width: 768px) {
+  #AssistantChat {
+    position: fixed;
+    bottom: 1vw;
+    right: 1vw;
+  }
+}
