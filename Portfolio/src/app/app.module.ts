@@ -14,6 +14,7 @@ import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ImageViewerLandscapeComponent } from './image-viewer-landscape/image-viewer-landscape.component';
 import { provideHttpClient } from '@angular/common/http';
+import { AIAssistantComponent } from './ai-assistant/ai-assistant.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { provideHttpClient } from '@angular/common/http';
     InventorywinappComponent,
     ImageViewerComponent,
     ContactFormComponent,
-    ImageViewerLandscapeComponent
+    ImageViewerLandscapeComponent,
+    AIAssistantComponent
   ],
   imports: [
     BrowserModule,
