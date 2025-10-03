@@ -1,4 +1,58 @@
-#AIChatContainer{
-    width: 10%;
-    height: 10%;
+
+#AIChatWindow{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid;
+    border-radius: 2vh;
+    border-color:black;
+    margin-right: 2vh;
+    overflow: hidden;
+}
+#AIChatWindowBanner {
+    justify-items: center;
+    background-color: #4A90E2;
+}
+#AIChatWindowBanner h3{
+    margin: 1vh;
+}
+#AIChatMessages{
+    flex-grow: 1;
+    background-color: white;
+}
+#AIChatInputContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+#AIChatButtonContainer {
+  display: flex;
+  justify-content: end;
+}
+#AIChatButton {
+    background-color: white;
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+@media (min-width: 768px) {
+  #AIChatWindow {
+      width: 40vh;
+      height: 50vh;
+  }
+  #AIChatInput{
+      height: 4vh;
+      flex-grow: 1;
+      border-radius: 1vh;
+      margin: 0 1vh 1vh 1vh;
+  }
+  #AIChatIcon {
+    width: 8vh;
+    height: 8vh;
+  }
+}
+
+@media (max-width: 768px) {
+
 }
