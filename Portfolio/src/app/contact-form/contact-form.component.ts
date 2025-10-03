@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 declare const grecaptcha: any;
+let isProduction: boolean = false;
 
 @Component({
   selector: 'app-contact-form',
@@ -31,14 +32,14 @@ export class ContactFormComponent {
     if (!this.contactForm.valid) {
       return;
     }
-
+    //Site key: 6LfROlcrAAAAADQMWEka1_jjK4cCswPeezBRHaiz
     grecaptcha.ready(() => {
-      grecaptcha.execute('6LfROlcrAAAAADQMWEka1_jjK4cCswPeezBRHaiz', { action: 'contact_form' }).then((token: string) => {
+      grecaptcha.execute('6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', { action: 'contact_form' }).then((token: string) => {
         const formData = {
           ...this.contactForm.value,
           captcha: token
         };
-
+        
         this.http.post('/api/contact', formData).subscribe({
           next: res => {
             alert('Form submitted successfully.');
