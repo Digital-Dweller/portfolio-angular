@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './ai-assistant.component.css'
 })
 export class AIAssistantComponent {
+  AIchatOpen = false;
+
+  toggleAIchat() {
+    this.AIchatOpen = !this.AIchatOpen;
+  }
 
 }

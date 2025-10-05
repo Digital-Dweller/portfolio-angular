@@ -1,6 +1,6 @@
 
 #AIChatWindow {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 2vh;
@@ -9,10 +9,13 @@
   overflow: hidden;
   background-color: white;
 }
-#AIChatWindowBanner {
+  #AIChatWindow.show {
+    display: flex;
+  }
+  #AIChatWindowBanner {
     justify-items: center;
     background-color: #4A90E2;
-}
+  }
 #AIChatWindowBanner h3{
     margin: 1vh;
 }

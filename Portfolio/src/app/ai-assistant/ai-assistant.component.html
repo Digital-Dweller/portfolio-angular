@@ -1,5 +1,5 @@
 <div id="AIChatContainer">
-  <div id="AIChatWindow">
+  <div id="AIChatWindow" [ngClass]="{ 'show': AIchatOpen }">
     <div id="AIChatWindowBanner">
       <h3>AI Assistant</h3>
     </div>
@@ -12,7 +12,7 @@
     </div>
   </div>
   <div id="AIChatButtonContainer">
-    <button id="AIChatButton" aria-label="Toggle AI chat window button">
+    <button id="AIChatButton" (click)="toggleAIchat()" aria-label="Toggle AI chat window button">
       <img id="AIChatIcon" src="resources/AI_ChatIcon.svg" />
     </button>
   </div>
