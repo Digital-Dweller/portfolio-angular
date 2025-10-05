@@ -1,13 +1,13 @@
 
-#AIChatWindow{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: solid;
-    border-radius: 2vh;
-    border-color:black;
-    margin-right: 2vh;
-    overflow: hidden;
+#AIChatWindow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 2vh;
+  box-shadow: 0 0 2vh #808080;
+  margin-right: 2vh;
+  overflow: hidden;
+  background-color: white;
 }
 #AIChatWindowBanner {
     justify-items: center;
@@ -18,19 +18,36 @@
 }
 #AIChatMessages{
     flex-grow: 1;
-    background-color: white;
 }
-#AIChatInputContainer{
+#AIChatInputContainer {
     display: flex;
     flex-direction: row;
+    border: solid;
+    border-radius: 1vh;
+    margin: 1vh;
+    padding: .25vh;
     background-color: white;
+}
+#AIChatInput {
+  height: 3.5vh;
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding: .25vh;
+}
+#AIChatSendButton {
+  background-color: white;
+  border: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 #AIChatButtonContainer {
   display: flex;
   justify-content: end;
 }
 #AIChatButton {
-    background-color: white;
+    background: none;
     border: none;
     appearance: none;
     -moz-appearance: none;
@@ -43,9 +60,6 @@
   }
   #AIChatInput{
       height: 4vh;
-      flex-grow: 1;
-      border-radius: 1vh;
-      margin: 0 1vh 1vh 1vh;
   }
   #AIChatIcon {
     width: 8vh;
