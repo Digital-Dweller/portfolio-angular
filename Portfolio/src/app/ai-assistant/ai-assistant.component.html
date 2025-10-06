@@ -7,6 +7,7 @@
       <div *ngFor="let message of conversation"
            [ngClass]="message.author"
            class="messageContainer">
+        <img class="messageIcon" src="resources/AI_ChatAssistantIcon.svg"/>
         <div
              [ngClass]="message.author"
              class="message">

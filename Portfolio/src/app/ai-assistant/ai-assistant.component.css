@@ -62,7 +62,12 @@
 .messageContainer.user {
     justify-items: end;
  }
+.messageContainer.user .messageIcon {
+    display: none;
+}
 .messageContainer.ai {
+    display: flex;
+    flex-direction: row;
     justify-items: start;
 }
 .message {
