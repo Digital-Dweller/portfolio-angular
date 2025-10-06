@@ -3,10 +3,28 @@
     <div id="AIChatWindowBanner">
       <h3>AI Assistant</h3>
     </div>
-    <div id="AIChatMessages"></div>
+    <div id="AIChatMessages">
+      <div *ngFor="let message of conversation"
+           [ngClass]="message.author"
+           class="messageContainer">
+        <div
+             [ngClass]="message.author"
+             class="message">
+          {{message.content}}
+        </div>
+      </div>
+    </div>
     <div id="AIChatInputContainer">
-      <input type="text" id="AIChatInput" name="userInput" placeholder="Chat with the portfolio AI assistant">
-      <button id="AIChatSendButton" aria-label="Send message to AI assistant button">
+      <input
+             type="text"
+             id="AIChatInput"
+             name="userInput"
+             [(ngModel)]="userInput"
+             (keydown.enter)="addUserMessage()"
+             placeholder="Chat with the portfolio AI assistant"
+
+      />
+      <button id="AIChatSendButton" (click)="addUserMessage()" aria-label="Send message to AI assistant button">
         <img id="AIChatSendIMG" src="resources/AI_ChatSend.svg"/>
       </button>
     </div>

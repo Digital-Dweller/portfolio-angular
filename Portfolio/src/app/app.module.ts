@@ -15,6 +15,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ImageViewerLandscapeComponent } from './image-viewer-landscape/image-viewer-landscape.component';
 import { provideHttpClient } from '@angular/common/http';
 import { AIAssistantComponent } from './ai-assistant/ai-assistant.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -35,7 +37,8 @@ import { AIAssistantComponent } from './ai-assistant/ai-assistant.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     provideHttpClient()

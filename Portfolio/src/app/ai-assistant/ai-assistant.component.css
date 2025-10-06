@@ -21,6 +21,7 @@
 }
 #AIChatMessages{
     flex-grow: 1;
+    overflow: auto;
 }
 #AIChatInputContainer {
     display: flex;
@@ -56,6 +57,27 @@
     -moz-appearance: none;
     -webkit-appearance: none;
 }
+.messageContainer {
+    margin: 1.5vh;
+}
+.messageContainer.user {
+    justify-items: end;
+ }
+.messageContainer.ai {
+    justify-items: start;
+}
+.message {
+  border-radius: 1vh;
+  padding: 1vh;
+  max-width: 25vh;
+}
+  .message.user {
+
+    background-color: #D3D3D3;
+  }
+  .message.ai {
+    background-color: #4A90E2;
+  }
 @media (min-width: 768px) {
   #AIChatWindow {
       width: 40vh;

@@ -1,1 +1,2 @@
 C:\Projects\PortfolioProject\Portfolio\obj\Debug\Portfolio.esproj.CoreCompileInputs.cache
+C:\Visual Studio Projects\portfolio\Portfolio\obj\Debug\Portfolio.esproj.CoreCompileInputs.cache
