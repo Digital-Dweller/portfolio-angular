@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+const userInputElement = document.getElementById('AIChatInput') as HTMLInputElement;
 interface AIConversation {
   author: 'user' | 'ai';
   content: string;
@@ -32,6 +33,7 @@ export class AIAssistantComponent {
       this.conversation.push({ author: 'ai', content: `You said: "${inputTrimmed}"` });
     }, 500);
 
+    this.userInput = '';
   }
 
 }
