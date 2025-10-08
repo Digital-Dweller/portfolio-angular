@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "DJ6o9f4zsRE=",
+  "success": true,
+  "projectFilePath": "C:\\Visual Studio Projects\\portfolio\\PortfolioBackend\\PortfolioBackend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.7\\microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.3\\microsoft.extensions.logging.abstractions.8.0.3.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\openai\\2.5.0\\openai.2.5.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\system.clientmodel\\1.6.1\\system.clientmodel.1.6.1.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\system.memory.data\\8.0.1\\system.memory.data.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

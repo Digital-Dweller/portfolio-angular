@@ -1,0 +1,42 @@
+using Microsoft.AspNetCore.OpenApi;
+using PortfolioBackend.Configurations;
+using PortfolioBackend.Services;
+
+var builder = WebApplication.CreateBuilder(args);
+
+//Get the OpenAI options from the appsettings.json and bind it to the OpenAIOptions instance.
+builder.Services.Configure<OpenAIOptions>(builder.Configuration.GetSection("OpenAI"));
+
+// Add services to the container.
+builder.Services.AddSingleton<OpenAIService>();
+builder.Services.AddControllers();
+
+// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddOpenApi();
+
+//Enable CORS to enable communication from the frontend.
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AngularDevPolicy", policy =>
+        policy.WithOrigins("http://localhost:50290")
+              .AllowAnyHeader()
+              .AllowAnyMethod());
+});
+
+var app = builder.Build();
+
+app.UseCors("AngularDevPolicy");
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+}
+
+//app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();

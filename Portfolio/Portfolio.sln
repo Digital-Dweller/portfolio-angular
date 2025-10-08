@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Portfolio", "Portfolio.esproj", "{A97500C0-D17E-E859-BBA0-F4ACC6225985}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioBackend", "..\PortfolioBackend\PortfolioBackend.csproj", "{1DFF0E46-1A90-4375-BF40-3FAF5B407DCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{A97500C0-D17E-E859-BBA0-F4ACC6225985}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A97500C0-D17E-E859-BBA0-F4ACC6225985}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A97500C0-D17E-E859-BBA0-F4ACC6225985}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1DFF0E46-1A90-4375-BF40-3FAF5B407DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DFF0E46-1A90-4375-BF40-3FAF5B407DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DFF0E46-1A90-4375-BF40-3FAF5B407DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DFF0E46-1A90-4375-BF40-3FAF5B407DCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
