@@ -1,5 +1,7 @@
 ﻿using System.ClientModel;
+using System.Data;
 using System.Reflection;
+using System.Text.Json;
 using Microsoft.Extensions.Options;
 using OpenAI;
 using OpenAI.Chat;
@@ -33,27 +35,20 @@ namespace PortfolioBackend.Services
 
         public async Task<string> GetChatResponse(string userMessage)
         {
-            //Build the ChatCompletion object using the system prompt and user input.
-            chatCompletion = chatClient.CompleteChat([
-                new SystemChatMessage(
-                    "You are a project assistant. ONLY answer using the provided 'Project data' JSON. " +
-                    "Do NOT add, guess, or invent any information. If the answer cannot be formed " +
-                    "entirely from the Project data, reply exactly: " +
-                    "\"I don't know — that information isn't in the dataset.\" " +
-                    "Be concise and reference only fields in the Project data (description, technologies, features, " +
-                    "challenges, implementation_details)."
-                    ),
-                new UserChatMessage(
-                    ChatMessageContentPart.CreateTextPart(userMessage)
-                    )
-                ],
-                new ChatCompletionOptions(){
-                MaxOutputTokenCount = 2048,
-                }
-            );
-            //Get the response text from the ChatCompletion object.
-            string chatResponseText = chatCompletion.Content[0].Text;
-            return( chatResponseText );
+            //Try to identify which project is being referenced in the user input.
+            var project = FindProject(userMessage);
+            if (project == null)
+                return "I can only answer questions about projects showcased on this website or on the portfolio site itself. Please specify which one you are referring to.";
+
+            //Try to generate a deterministic response.
+            var intent = DetectIntent(userMessage);
+            if (intent != null)
+            {
+                return DeterministicReply(project, intent);
+            }
+
+            //Use OpenAI API to generate a response if failed to generate a deterministic response.
+            return await StrictModelFallback(userMessage, project);
         }
 
         //Helper function that checks if a project in the dataset is referenced in user input message.
@@ -107,6 +102,32 @@ namespace PortfolioBackend.Services
             };
 
             return val;
+        }
+
+        //Helper function to handle the call to the OpenAI API if a response could not be determined using the other helper functions.
+        private async Task<string> StrictModelFallback(string userMessage, PortfolioProject project)
+        {
+            //Build the ChatCompletion object using the system prompt and user input.
+            chatCompletion = chatClient.CompleteChat([
+                new SystemChatMessage("""
+                    You are a portfolio assistant. ONLY answer using the provided project data. 
+                    Do NOT add or invent information. 
+                    If the answer cannot be derived from the project data, reply exactly:
+                    "I don't know — that information isn't in the dataset."
+                """),
+                new UserChatMessage(
+                    ChatMessageContentPart.CreateTextPart($"User question: {userMessage}\n\nProject data: {JsonSerializer.Serialize(project)}")
+                    )
+                ],
+                new ChatCompletionOptions()
+                {
+                    Temperature = 0,
+                    MaxOutputTokenCount = 400
+                }
+            );
+            //Get the response text from the ChatCompletion object.
+            string chatResponseText = chatCompletion.Content[0].Text;
+            return (chatResponseText);
         }
     }
 }
