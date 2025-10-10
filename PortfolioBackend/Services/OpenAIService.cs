@@ -83,5 +83,30 @@ namespace PortfolioBackend.Services
                 return "description";
             return null;
         }
+
+        //Helper function to generate a reply without calling to the OpenAI API if DetectIntent was able to determine the users intent from the message contents.
+        private string DeterministicReply(PortfolioProject project, string field)
+        {
+            var val = field switch
+            {
+                //Match the attribute from the users input message and construct a string with the values found.
+                "technologies" => project.Technologies != null
+                    ? $"Technologies used in {project.ProjectName}: {string.Join(", ", project.Technologies)}."
+                    : "No technologies listed.",
+                "features" => project.Features != null
+                    ? $"Key features of {project.ProjectName}: {string.Join(", ", project.Features)}."
+                    : "No features listed.",
+                "challenges" => project.Challenges != null
+                    ? $"Challenges in {project.ProjectName}: {string.Join(", ", project.Challenges)}."
+                    : "No challenges listed.",
+                "implementation_details" => project.ImplementationDetails != null
+                    ? $"Implementation details: {string.Join(", ", project.ImplementationDetails)}."
+                    : "No implementation details listed.",
+                "description" => project.Description ?? "No description available.",
+                _ => "I don't have that information in the dataset."
+            };
+
+            return val;
+        }
     }
 }
