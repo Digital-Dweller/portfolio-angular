@@ -4,6 +4,7 @@ using Microsoft.Extensions.Options;
 using OpenAI;
 using OpenAI.Chat;
 using PortfolioBackend.Configurations;
+using PortfolioBackend.Models;
 
 
 namespace PortfolioBackend.Services
@@ -12,9 +13,14 @@ namespace PortfolioBackend.Services
     {
         private  ChatCompletion chatCompletion;
         private readonly ChatClient chatClient;
+        private readonly List<PortfolioProject> _projects;
 
-        public OpenAIService(IOptions<OpenAIOptions> options)
+
+        public OpenAIService(IOptions<OpenAIOptions> options, List<PortfolioProject> projects)
         {
+            //Get list of projects from the DI container.
+            _projects = projects;
+
             //Get the OpenAI API key from the OpenAIOptions instance.
             var apiKey = options.Value.ApiKey;
             if (string.IsNullOrWhiteSpace(apiKey))
