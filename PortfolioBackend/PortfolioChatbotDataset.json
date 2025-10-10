@@ -1,0 +1,164 @@
+[
+    {
+        "project_name": "Degree Planner",
+        "description": "A .NET MAUI app for planning college terms, courses, assignments, and course notes, with user authentication and device alerts.",
+        "technologies": [
+            "C#", 
+            ".NET MAUI", 
+            "SQLite", 
+            "Bcrypt", 
+            "LINQ", 
+            "Lambda expressions",
+            "MVVM architecture",
+            "Async programming",
+            "Platform-specific notifications",
+            "Dependency Injection (DI)"
+        ],
+        "features": [
+            "Login and logout with secure authentication",
+            "Manage terms, courses, assignments, and course notes (add/edit/delete)",
+            "Set device alerts for courses and assignments",
+            "Search and filter courses and assignments"
+        ],
+        "challenges": [
+            "Cross-platform UI implementation for Android and iOS",
+            "Local database sync and consistency with SQLite",
+            "Implementing device alerts for courses and assignments",
+            "Secure user authentication with Bcrypt",
+            "Efficient data querying and filtering using LINQ and lambda expressions"
+        ],
+        "implementation_details": [
+            "Used LINQ and lambda expressions for querying and filtering SQLite data",
+            "Implemented secure password hashing with Bcrypt",
+            "Designed responsive UI for cross-platform deployment",
+            "Structured data models and relationships for terms, courses, assignments, and notes in SQLite",
+            "Followed MVVM pattern for maintainable, testable code",
+            "Implemented device alerts for courses and assignments using platform-specific notification APIs",
+            "Implemented dependency injection using a DI container",
+            "Validated user input and handled exceptions gracefully",
+            "Handled navigation between multiple pages in the app",
+            "Performed database operations asynchronously to maintain UI responsiveness"
+        ]
+    },
+    {
+        "project_name": "Recipe Keeper",
+        "description": "A .NET MAUI app for storing, organizing, and managing recipes with secure authentication, camera integration, and search functionality.",
+        "technologies": [
+            "C#", 
+            ".NET MAUI", 
+            "SQLite", 
+            "Bcrypt", 
+            "LINQ", 
+            "Lambda expressions",
+            "MVVM architecture",
+            "Async programming",
+            "Platform-specific notifications",
+            "Dependency Injection (DI)"
+        ],
+        "features": [
+            "Login and logout with secure authentication",
+            "Update username, email, or password",
+            "Manage recipes, ingredients, and recipe steps (add/edit/delete)",
+            "Favorite and view recipes",
+            "Use device camera to capture images of recipes",
+            "Search recipes by name or ingredients"
+        ],
+        "challenges": [
+            "Cross-platform UI implementation for Android and iOS",
+            "Local database sync and consistency with SQLite",
+            "Secure user authentication with Bcrypt",
+            "Efficient data querying and filtering using LINQ and lambda expressions",
+            "Implementing dependency injection for maintainable code",
+            "Accessing camera hardware and storing images",
+            "Maintaining responsive UI with asynchronous database operations"
+        ],
+        "implementation_details": [
+            "Used LINQ and lambda expressions for querying and filtering SQLite data",
+            "Implemented secure password hashing and authentication with Bcrypt",
+            "Designed responsive UI for cross-platform deployment",
+            "Structured data models and relationships for recipes, ingredients, favorites, and recipe steps in SQLite",
+            "Followed MVVM pattern for maintainable, testable code",
+            "Implemented dependency injection using a DI container",
+            "Validated user input and handled exceptions gracefully",
+            "Handled navigation between multiple pages using .NET MAUI navigation patterns",
+            "Integrated device camera functionality for capturing recipe images",
+            "Performed database operations asynchronously to maintain UI responsiveness"
+        ]
+    },
+    {
+        "project_name": "IoT Plant Grower",
+        "description": "An IoT system for automating the growth of microgreens and garden plants with remote monitoring, scheduling, and hardware control.",
+        "technologies": [
+            "Arduino", 
+            "C++", 
+            "Linux", 
+            "MQTT", 
+            "Apache", 
+            "PHP", 
+            "HTML/CSS", 
+            "KVM", 
+            "QEMU", 
+            "Custom PCBs", 
+            "PWM"
+        ],
+        "features": [
+            "Manage grow schedules (add/edit/delete)",
+            "Automated control of LED lighting and fans",
+            "Remote access through web-based control interface"
+        ],
+        "challenges": [
+            "Linux virtualization for isolated IoT testing environments",
+            "Custom PCB and circuit design for Arduino integration",
+            "Reliable MQTT communication between devices and server",
+            "Implementing accurate control scheduling with minimal latency"
+        ],
+        "implementation_details": [
+            "Established MQTT broker server for IoT communication",
+            "Developed Arduino firmware in C++ for LED, fan, and schedule control",
+            "Designed sister PCB for Arduino electronic interface with LEDs and fans",
+            "Created web-based control panel using PHP, HTML, and CSS",
+            "Used shell scripts for automated control scheduling and process management",
+            "Tested and validated system stability using Linux virtualization with KVM and QEMU"
+        ]
+    },
+    {
+        "project_name": "Portfolio Site",
+        "description": "A personal portfolio website showcasing projects, background, and technical skills, with integrated AI assistant and secure contact functionality.",
+        "technologies": [
+            "Angular", 
+            "JavaScript", 
+            "Node.js", 
+            "Linux", 
+            "QEMU", 
+            "KVM", 
+            "HTML/CSS", 
+            "reCAPTCHA", 
+            "DNS", 
+            "GitHub", 
+            "OpenAI API"
+        ],
+        "features": [
+            "View professional experience, skills, and project details",
+            "Contact form with email relay service and reCAPTCHA protection",
+            "Interactive AI portfolio assistant powered by OpenAI API"
+        ],
+        "challenges": [
+            "Configuring Linux virtualization with KVM and QEMU for isolated testing",
+            "Setting up secure and reliable production deployment",
+            "Implementing CI/CD pipelines for automated updates",
+            "Integrating AI assistant functionality using OpenAI API",
+            "Ensuring contact form security with reCAPTCHA and spam prevention"
+        ],
+        "implementation_details": [
+            "Set up a Linux-based virtualized testing environment using KVM and QEMU",
+            "Established CI/CD pipelines with GitHub for automated deployment",
+            "Developed front-end using Angular and JavaScript with responsive design",
+            "Built back-end services with Node.js and shell scripts",
+            "Implemented contact form with email relay and reCAPTCHA verification",
+            "Integrated AI assistant into the site using OpenAI API",
+            "Configured secure production Linux server environment with firewall and DNS setup",
+            "Deployed site by cloning GitHub repository to production server"
+        ]
+    }
+
+]
