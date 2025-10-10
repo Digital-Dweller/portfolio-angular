@@ -1,5 +1,7 @@
+using System.Text.Json;
 using Microsoft.AspNetCore.OpenApi;
 using PortfolioBackend.Configurations;
+using PortfolioBackend.Models;
 using PortfolioBackend.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,6 +28,11 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 app.UseCors("AngularDevPolicy");
+
+//Construct the dataset's file path.
+var datasetPath = Path.Combine(AppContext.BaseDirectory, "PortfolioChatbotDataset.json");
+//Create a list of portfolio projects using the dataset.
+var projects = JsonSerializer.Deserialize<List<PortfolioProject>>(File.ReadAllText(datasetPath)) ?? new List<PortfolioProject>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
