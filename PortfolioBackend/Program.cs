@@ -6,6 +6,13 @@ using PortfolioBackend.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//Construct the dataset's file path.
+var datasetPath = Path.Combine(AppContext.BaseDirectory, "PortfolioChatbotDataset.json");
+//Create a list of portfolio projects using the dataset.
+var projects = JsonSerializer.Deserialize<List<PortfolioProject>>(File.ReadAllText(datasetPath)) ?? new List<PortfolioProject>();
+//Add projects list to the DI container.
+builder.Services.AddSingleton(projects);
+
 //Get the OpenAI options from the appsettings.json and bind it to the OpenAIOptions instance.
 builder.Services.Configure<OpenAIOptions>(builder.Configuration.GetSection("OpenAI"));
 
@@ -29,10 +36,6 @@ var app = builder.Build();
 
 app.UseCors("AngularDevPolicy");
 
-//Construct the dataset's file path.
-var datasetPath = Path.Combine(AppContext.BaseDirectory, "PortfolioChatbotDataset.json");
-//Create a list of portfolio projects using the dataset.
-var projects = JsonSerializer.Deserialize<List<PortfolioProject>>(File.ReadAllText(datasetPath)) ?? new List<PortfolioProject>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
