@@ -66,5 +66,22 @@ namespace PortfolioBackend.Services
             }
             return null;
         }
+
+        //Helper function that attempts to determine the intent of the user message by matching it up to an attribute of an entry in the dataset.
+        private string? DetectIntent(string msg)
+        {
+            msg = msg.ToLower();
+            if (msg.Contains("language") || msg.Contains("stack") || msg.Contains("built with"))
+                return "technologies";
+            if (msg.Contains("feature"))
+                return "features";
+            if (msg.Contains("challenge"))
+                return "challenges";
+            if (msg.Contains("implement"))
+                return "implementation_details";
+            if (msg.Contains("describe") || msg.Contains("what is"))
+                return "description";
+            return null;
+        }
     }
 }
