@@ -54,8 +54,17 @@ namespace PortfolioBackend.Services
             //Get the response text from the ChatCompletion object.
             string chatResponseText = chatCompletion.Content[0].Text;
             return( chatResponseText );
+        }
 
-
+        //Helper function that checks if a project in the dataset is referenced in user input message.
+        private PortfolioProject? FindProject(string message)
+        {
+            foreach (var project in _projects)
+            {
+                if (message.Contains(project.ProjectName, StringComparison.OrdinalIgnoreCase))
+                    return project;
+            }
+            return null;
         }
     }
 }
