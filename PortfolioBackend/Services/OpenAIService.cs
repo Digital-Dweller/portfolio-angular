@@ -23,13 +23,14 @@ namespace PortfolioBackend.Services
             //Get list of projects from the DI container.
             _projects = projects;
 
-            //Get the OpenAI API key from the OpenAIOptions instance.
+            //Get the OpenAI API key and URL from the OpenAIOptions instance.
             var apiKey = options.Value.ApiKey;
+            var apiURL = options.Value.ApiURL;
             if (string.IsNullOrWhiteSpace(apiKey))
                 throw new InvalidOperationException("OpenAI API key is missing or not configured.");
 
             //Create ChatClient object using the model and API key.
-            chatClient = new("Add model or model URL here!", apiKey);
+            chatClient = new(apiURL, apiKey);
 
         }
 
