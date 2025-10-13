@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class ChatService {
   //API URL for the back-end AI chat API.
   //private apiUrl = 'http://localhost:5028/api/aichat/send';
-  private apiUrl = '/api';
+  private apiUrl = '/api/aichat';
 
   //Constructor providing the HttpCLient.
   constructor(private http: HttpClient) { }
